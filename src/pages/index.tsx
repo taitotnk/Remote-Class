@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <RealtimeHeader />
-      <div className={styles.container} onMouseMove={onMouseMove}>
+      <div className={styles.container} onClick={onMouseMove}>
         <main className={styles.main}>{renderCursors()}</main>
       </div>
     </div>

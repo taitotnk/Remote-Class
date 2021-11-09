@@ -1,9 +1,11 @@
 import "styles/globals.css";
+import * as React from "react";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import { useAuth } from "context/useAuth";
 import Router from "next/router";
 import { AuthProvider } from "context/Auth";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { currentUser } = useAuth();
@@ -14,9 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [currentUser]);
 
   return (
-    <AuthProvider>
-      <Component {...pageProps} />
-    </AuthProvider>
+    <ChakraProvider>
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
+    </ChakraProvider>
   );
 }
 export default MyApp;

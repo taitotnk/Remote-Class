@@ -1,0 +1,77 @@
+.header{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position:absolute;
+    display: flex;
+    background-color:#FFFFFE;
+    border-bottom:#094067 1px solid;
+    width: 100%;
+    padding-bottom: 20px;
+    z-index: 10;
+}
+
+.icon{
+    width: 330px; /*330px*/
+    margin-right: 170px;
+}
+
+.centerText{
+    color: #094067;
+    font-family: 'Baskerville Old Face';
+    text-align: center;
+    width: 400px; /*400px*/
+    margin: auto;
+}
+
+.centerTextTop{
+    margin: 0;
+    padding-top: 10px;
+    font-size: 6.0rem;
+}
+
+.centerTextBottom{
+    margin: 0;
+    font-size: 3.0rem;
+    padding-bottom: 10px;
+}
+
+.end{
+    margin-right: 20px;
+}
+
+.menuGroup{
+    display: flex;
+    padding: 0;
+}
+
+.right {
+    color: #094067;
+    font-family: 'Baskerville Old Face';
+    font-size: 3.0rem;
+    margin-right: 30px;
+}
+
+.signin{
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.LoginButton{
+    display: block;
+    position: absolute;
+    top: 500px;
+}
+
+.appIntro{
+    cursor: pointer;
+}
+
+.funcIntro{
+    cursor: pointer;
+}
+
+.login{
+    cursor: pointer;
+}

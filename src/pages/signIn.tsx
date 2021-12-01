@@ -27,7 +27,9 @@ const SignIn: FC = () => {
         INIADアカウントでログイン
       </button>
       </div>
+      <div className="scroll-main">
       <IntroPage></IntroPage>
+    </div>
     </div>
     
     

@@ -1,6 +1,56 @@
 .bg{
     position: relative;
     width: 100%;
-    min-height: 100vh;
     z-index: 1;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.bg1Box{
+    position: relative;
+    width: 100%;    
+    text-align: center;
+
+}
+
+.loginButton{
+    z-index: 2;
+    position: absolute;
+    top: 60vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.scroll{
+    z-index: 2;
+    position: absolute;
+    top: 75vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.topPage{
+    max-height: 100vh;
+}
+
+.bg7Box{
+    position: relative;
+    width: 100%;    
+    text-align: center;
+}
+
+.underLoginButton{
+    z-index: 2;
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
 }

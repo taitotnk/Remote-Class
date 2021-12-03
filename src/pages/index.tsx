@@ -3,38 +3,38 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "styles/Home.module.css";
 import { useRealtimeCursor, useRealtimeUserAction } from "realtimely";
-import RealtimeHeader from "components/RealtimeHeader";
 import logout from "lib/logout";
 import { useAuth } from "context/useAuth";
 import { GetServerSideProps } from "next";
 import { CustomCursorViewParameter } from "realtimely/dist/components/CursorAnimate";
 import CursorIcon from "components/CursorIcon";
+import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
-  const { onMouseMove, renderCursors } = useRealtimeCursor();
   const { currentUser } = useAuth();
+  const { onMouseMove, renderCursors } = useRealtimeCursor(
+    100,
+    JSON.stringify(currentUser)
+  );
 
-  const customView = () => {
-    const param: CustomCursorViewParameter = {
-      userInfo: {
-        color: "white",
-        avatar: currentUser?.photoURL,
-        name: currentUser?.displayName,
-      },
-    };
-    return <CursorIcon userInfo={param.userInfo} />;
+  const customView = (param: CustomCursorViewParameter) => {
+    return <CursorIcon userInfo={param.customInfo} />;
   };
 
   return (
-    <div>
-      <button onClick={logout}>logout</button>
+    <Box background={"grey"}>
       <div>
-        <RealtimeHeader />
-        <div className={styles.container} onClick={onMouseMove}>
-          <main className={styles.main}>{renderCursors(customView)}</main>
+        <Button colorScheme="blue" onClick={logout}>
+          logout
+        </Button>
+        <div>
+          <div className={styles.container} onClick={onMouseMove}>
+            <main className={styles.main}>{renderCursors(customView)}</main>
+          </div>
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 

@@ -15,8 +15,8 @@ const SignInHeader = () => {
             </div>
             <div className={cssHeader.end}>
                 <ul className={cssHeader.menuGroup}>
-                <li className={cssHeader.menuGroup}><Scroll to="bg3" smooth={true}><p className={cssHeader.right +" "+cssHeader.appIntro}>アプリ紹介</p></Scroll></li>
-                <li className={cssHeader.menuGroup}><Scroll to="bg4" smooth={true}><p className={cssHeader.right +" "+cssHeader.funcIntro}>機能紹介</p></Scroll></li>
+                <li className={cssHeader.menuGroup}><Scroll to="page3" smooth={true}><p className={cssHeader.right +" "+cssHeader.appIntro}>アプリ紹介</p></Scroll></li>
+                <li className={cssHeader.menuGroup}><Scroll to="page6" smooth={true}><p className={cssHeader.right +" "+cssHeader.funcIntro}>機能紹介</p></Scroll></li>
                 <li className={cssHeader.menuGroup}><p className={cssHeader.right +" "+ cssHeader.login} onClick={login}>ログイン</p></li>
                 </ul>
             </div>

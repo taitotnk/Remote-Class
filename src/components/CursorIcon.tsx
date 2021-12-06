@@ -17,9 +17,7 @@ const CursorIcon = (props) => {
           border-radius: 50%;
         }
       `}</style>
-      <div className={styles.username} style={{ color: userData.color }}>
-        {userData.displayName}
-      </div>
+      <div className={styles.username}>{userData.displayName}</div>
     </>
   );
 };

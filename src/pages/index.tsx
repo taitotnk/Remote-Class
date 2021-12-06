@@ -10,6 +10,7 @@ import { CustomCursorViewParameter } from "realtimely/dist/components/CursorAnim
 import CursorIcon from "components/CursorIcon";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
+import Header from "components/Header";
 
 const Home: NextPage = () => {
   const { currentUser } = useAuth();
@@ -23,18 +24,22 @@ const Home: NextPage = () => {
   };
 
   return (
-    <Box background={"grey"}>
-      <div>
-        <Button colorScheme="blue" onClick={logout}>
-          logout
-        </Button>
+    <>
+      <Header
+        image={currentUser?.photoURL}
+        name={currentUser?.displayName}
+        email={currentUser?.email}
+      />
+      <Box background={"#ecf0f5"}>
         <div>
-          <div className={styles.container} onClick={onMouseMove}>
-            <main className={styles.main}>{renderCursors(customView)}</main>
+          <div>
+            <div className={styles.container} onClick={onMouseMove}>
+              <main className={styles.main}>{renderCursors(customView)}</main>
+            </div>
           </div>
         </div>
-      </div>
-    </Box>
+      </Box>
+    </>
   );
 };
 

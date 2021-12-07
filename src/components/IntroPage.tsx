@@ -23,8 +23,8 @@ const IntroPage = (props) => {
 
         </div>
 
-        <div style={{position: 'relative', width: '100%', height:'100hv', backgroundColor: 'red'}} id="page2">
-        <Image src="/images/login_img/page2.png" alt="page2" layout='fill' />
+        <div style={{position: 'relative', width: '100%', height:'100vh', backgroundColor: 'red'}} id="page2">
+            <Image src="/images/login_img/page2.png" alt="page2" layout='fill' />
         </div>
 
         <div style={{position: 'relative', width: '100%', height:'100vh', backgroundColor: 'red'}} id="page3">

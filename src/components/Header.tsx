@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import logout from "lib/logout";
+import Image from "next/image";
 import {
   Box,
   Flex,
@@ -26,7 +27,7 @@ type Props = {
   email: string;
 };
 
-const Links = ["Logout"];
+const Links = ["Menu"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -37,7 +38,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: "none",
       bg: "blue.500",
     }}
-    onClick={logout}
+    // onClick={logout}
   >
     {children}
   </Link>
@@ -49,7 +50,7 @@ const Header: React.FC<Props> = ({ image, name, email }) => {
   return (
     <>
       <Box bg="blue.300" px={4}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -58,7 +59,14 @@ const Header: React.FC<Props> = ({ image, name, email }) => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Logo</Box>
+            <Box>
+              <Image
+                src="/images/icon.png"
+                height={100}
+                width={200}
+                alt="icon"
+              />
+            </Box>
             <HStack
               as={"nav"}
               spacing={4}

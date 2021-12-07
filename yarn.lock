@@ -4580,10 +4580,10 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
-realtimely@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/realtimely/-/realtimely-3.3.0.tgz#efa0d01903090a823d449aac211e657a59953924"
-  integrity sha512-JT1Xy7UGJN2dRxzBf4Tb34UwgElqhdDs/tR1Jb1bpG7RXQDBodz2SfEUwYWro6b/BFgPluq9SpJ5LAT2K+VwpQ==
+realtimely@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/realtimely/-/realtimely-4.0.0.tgz#639a76b13ba3f80b12128ac66b291393ff61cd89"
+  integrity sha512-ewHaqWY/VCuTKmtviX/AmJcAiPM7rVVBUJyIHYQTs63szQMPvq0+kP/e7NKfnhUnlU6Dzit12wQF3E/fORa1jA==
   dependencies:
     "@apollo/client" "^3.4.8"
     aws-appsync-auth-link "^3.0.6"

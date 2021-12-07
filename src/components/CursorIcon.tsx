@@ -1,17 +1,13 @@
 import Image from "next/image";
 import styles from "styles/CursorIcon.module.css";
 
-type Props = {
-  userInfo: { color: string; avatar: string; name: string };
-};
-
-const CursorIcon = (props: Props) => {
-  const userInfo = props.userInfo;
+const CursorIcon = (props) => {
+  const userData = JSON.parse(props.userInfo);
   return (
     <>
       <Image
         className="avatar"
-        src={userInfo.avatar}
+        src={userData.photoURL}
         width={80}
         height={80}
         alt={"icon"}
@@ -21,9 +17,7 @@ const CursorIcon = (props: Props) => {
           border-radius: 50%;
         }
       `}</style>
-      <div className={styles.username} style={{ color: userInfo.color }}>
-        {props.userInfo.name}
-      </div>
+      <div className={styles.username}>{userData.displayName}</div>
     </>
   );
 };

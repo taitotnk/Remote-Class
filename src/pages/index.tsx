@@ -25,6 +25,10 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Virtual Space for INIAD</title>
+        <link rel="shortcut icon" href="/images/icon.png" />
+      </Head>
       <Header
         image={currentUser?.photoURL}
         name={currentUser?.displayName}

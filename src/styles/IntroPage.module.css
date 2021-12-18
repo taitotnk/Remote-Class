@@ -41,3 +41,62 @@
     z-index: 2;
     cursor: pointer;
 }
+
+
+.page1{
+    background-image: url("../../public/images/login_img/page1.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.page2{
+    background-image: url("../../public/images/login_img/page2.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.page3{
+    background-image: url("../../public/images/login_img/page3.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.page4{
+    background-image: url("../../public/images/login_img/page4.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.page5{
+    background-image: url("../../public/images/login_img/page5.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.page6{
+    background-image: url("../../public/images/login_img/page6.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.page7{
+    background-image: url("../../public/images/login_img/page7.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}

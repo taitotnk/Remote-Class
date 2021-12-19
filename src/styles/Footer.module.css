@@ -1,0 +1,39 @@
+.footer{
+    display: flex;
+    background-color: #094067;
+}
+
+.copyright{
+    text-align: center;
+    margin: auto 0;
+    width: 20vw;
+}
+
+.copyright p{
+    font-family: "Baskerville Old Face";
+    font-size: 1vw;
+    color: #FFFFFE;
+}
+
+.centerText{
+    color: #FFFFFE;
+    font-family: "Baskerville Old Face";
+    text-align: center;
+    width: 40%; 
+    margin: auto;
+}
+
+.centerTextTop{
+    font-size: 2.5vw;
+}
+
+.centerTextBottom{
+    font-size: 1vw;
+}
+
+.iconDiv{
+    position: relative;
+    width: 13vw;
+    height: 6vw;
+    margin-left: 7vw;
+}

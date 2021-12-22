@@ -1,43 +1,112 @@
 .loginButtonDiv{
     position: absolute;
-    top: 65vh;
+    top: 31vw;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
     cursor: pointer;
+    width: 25vw;
+    height: 10vh;
 }
 
 .loginButton{
-    z-index: 2;
+    top: 1000px;
 }
 
-.scrollButtonDiv{
+.scrollDiv{
     position: absolute;
-    top: 75vh;
+    top: 43vw;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
     cursor: pointer;
+    width: 8vw;
+    height: 8vw;
 }
 
 
-.scrollButton{
-    z-index: 2;
-}
 
 .underLoginButtonDiv{
     position: absolute;
-    top: 60vh;
+    top: 338vw;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
-
+    width: 40vw;
+    height: 10vw;
 }
 
 .underLoginButton{
     z-index: 2;
     cursor: pointer;
+}
+
+
+.page1{
+    background-image: url("../../public/images/login_img/page1.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50%;
+    width: 100%;
+}
+
+.page2{
+    background-image: url("../../public/images/login_img/page2.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50%;
+    width: 100%;
+}
+
+.page3{
+    background-image: url("../../public/images/login_img/page3.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    padding-top: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.page4{
+    background-image: url("../../public/images/login_img/page4.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50%;
+    width: 100%;
+}
+
+
+.page5{
+    background-image: url("../../public/images/login_img/page5.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50%;
+    width: 100%;
+}
+
+.page6{
+    background-image: url("../../public/images/login_img/page6.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50%;
+    width: 100%;
+}
+
+
+.page7{
+    background-image: url("../../public/images/login_img/page7.png");
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50%;
+    width: 100%;
 }

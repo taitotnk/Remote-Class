@@ -4,6 +4,7 @@ import { useAuth } from "context/useAuth";
 import login from "lib/login";
 import SignInHeader from "../components/SignInHeader";
 import IntroPage from "components/IntroPage";
+import Footer from "components/Footer";
 import cssHeader from "../styles/SignInHeader.module.css";
 import Head from "next/head";
 
@@ -27,6 +28,9 @@ const SignIn: FC = () => {
         </div>
         <div className="scroll-main">
           <IntroPage></IntroPage>
+        </div>
+        <div>
+          <Footer></Footer>
         </div>
       </div>
     </>

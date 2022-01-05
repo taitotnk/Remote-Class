@@ -12,6 +12,7 @@ import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Header from "components/Header";
 import Chat from "components/Chat";
+import Slide from "components/Slide";
 
 const Home: NextPage = () => {
   const { currentUser } = useAuth();
@@ -38,6 +39,9 @@ const Home: NextPage = () => {
       <Box background={"#ecf0f5"}>
         <div>
           <div>
+            <div className={styles.slide_container}>
+              <Slide />
+            </div>
             <div className={styles.container} onClick={onMouseMove}>
               <main className={styles.main}>{renderCursors(customView)}</main>
             </div>

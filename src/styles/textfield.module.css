@@ -1,0 +1,45 @@
+.textfield_container {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+}
+
+.textbox {
+    margin-top: 50px;
+    border: 1px solid #acacac;
+    color: black;
+    opacity: .7;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    font-size: 16px;
+    outline: none;
+    background-color: #acacac;
+  }
+
+  .mini_textbox {
+    margin-top: 50px;
+    font-family: cursive;
+    border: 1px solid #acacac;
+    color: black;
+    opacity: .7;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    font-size: 12px;
+    outline: none;
+    background-color: #acacac;
+  }
+  
+  .mini_textbox:focus {
+    width: 220px;
+    outline: none;
+  }

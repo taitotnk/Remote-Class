@@ -11,6 +11,7 @@ import CursorIcon from "components/CursorIcon";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Header from "components/Header";
+import Chat from "components/Chat";
 
 const Home: NextPage = () => {
   const { currentUser } = useAuth();
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <Chat />
       </Box>
     </>
   );

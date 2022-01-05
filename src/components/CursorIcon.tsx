@@ -3,6 +3,7 @@ import styles from "styles/CursorIcon.module.css";
 
 const CursorIcon = (props) => {
   const userData = JSON.parse(props.userInfo);
+
   return (
     <>
       <Image

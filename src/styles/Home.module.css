@@ -112,6 +112,13 @@
   margin-left: 0.5rem;
 }
 
+.slide_container {
+  position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

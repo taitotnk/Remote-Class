@@ -7,11 +7,13 @@ interface Props {
 }
 
 const BottomTextField = (props: Props) => {
+  const chatValue = JSON.parse(props.value || "{}");
+
   return (
     <div className={style.textfield_container}>
       <input
         onChange={(e) => props.onChange(e.target.value)}
-        value={props.value}
+        value={chatValue.text}
         className={style.textbox}
         type="text"
         name="q"

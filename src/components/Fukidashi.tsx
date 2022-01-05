@@ -1,4 +1,5 @@
 import style from "styles/fukidashi.module.css";
+import Image from "next/image";
 
 interface Props {
   text: string;
@@ -8,10 +9,13 @@ interface Props {
 }
 
 const Fukidashi = (props: Props) => {
+  const chatValue = JSON.parse(props.text || "{}");
   return (
     <div className={style.fukidashi_container}>
+      <Image src={chatValue.img} width={40} height={40} alt={"chat_icon"} />
+      <div style={{ color: "black" }}>{chatValue.name}</div>
       <div className={style.arrow_box}>
-        {props.text}
+        {chatValue.text}
         <div className={style.arrow_box_after}></div>
       </div>
 

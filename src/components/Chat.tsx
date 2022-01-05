@@ -5,6 +5,7 @@ import { useRealtimeUserAction } from "realtimely";
 import BottomTextField from "./BottomTextField";
 import Fukidashi from "./Fukidashi";
 import styles from "../styles/Home.module.css";
+import { useAuth } from "context/useAuth";
 
 const Chat: React.FC = () => {
   const [yourText, setYourText] = useState("");
@@ -12,8 +13,15 @@ const Chat: React.FC = () => {
 
   const { pushUserAction, userActionList } = useRealtimeUserAction();
 
+  const { currentUser } = useAuth();
+
   const onChange = (text: string) => {
-    setYourText(text);
+    const _text = JSON.stringify({
+      text: text,
+      name: currentUser.displayName,
+      img: currentUser.photoURL,
+    });
+    setYourText(_text);
   };
 
   useEffect(() => {

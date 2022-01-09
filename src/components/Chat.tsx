@@ -6,6 +6,7 @@ import BottomTextField from "./BottomTextField";
 import Fukidashi from "./Fukidashi";
 import styles from "../styles/Home.module.css";
 import { useAuth } from "context/useAuth";
+import Chatcss from "../styles/Chat.module.css"
 
 const Chat: React.FC = () => {
   const [yourText, setYourText] = useState("");

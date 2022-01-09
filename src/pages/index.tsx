@@ -13,6 +13,7 @@ import { Box } from "@chakra-ui/react";
 import Header from "components/Header";
 import Chat from "components/Chat";
 import Slide from "components/Slide";
+import stylesOfChat from "../styles/Chat.module.css";
 
 const Home: NextPage = () => {
   const { currentUser } = useAuth();
@@ -47,7 +48,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <Chat />
+        <div className={stylesOfChat.chat_div}>
+          <Chat />
+        </div>
       </Box>
     </>
   );

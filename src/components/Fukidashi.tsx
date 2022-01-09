@@ -27,9 +27,7 @@ const Fukidashi = (props: Props) => {
           marginTop: 20,
           fontSize: 40,
         }}
-      >
-        <div style={{ fontSize: "12px" }}>{props.name}</div>
-      </div>
+      ></div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import style from "styles/fukidashi.module.css";
 import Image from "next/image";
+import { HStack } from "@chakra-ui/react";
 
 interface Props {
   text: string;
@@ -12,8 +13,16 @@ const Fukidashi = (props: Props) => {
   const chatValue = JSON.parse(props.text || "{}");
   return (
     <div className={style.fukidashi_container}>
-      <Image src={chatValue.img} width={40} height={40} alt={"chat_icon"} />
-      <div style={{ color: "black" }}>{chatValue.name}</div>
+      <HStack spacing="5px">
+        <Image
+          src={chatValue.img}
+          className="chat_icon"
+          width={30}
+          height={30}
+          alt={"chat_icon"}
+        />
+        <div style={{ color: "black" }}>{chatValue.name}</div>
+      </HStack>
       <div className={style.arrow_box}>
         {chatValue.text}
         <div className={style.arrow_box_after}></div>
@@ -27,9 +36,12 @@ const Fukidashi = (props: Props) => {
           marginTop: 20,
           fontSize: 40,
         }}
-      >
-        <div style={{ fontSize: "12px" }}>{props.name}</div>
-      </div>
+      ></div>
+      <style jsx global>{`
+        .chat_icon {
+          border-radius: 50%;
+        }
+      `}</style>
     </div>
   );
 };

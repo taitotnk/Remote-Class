@@ -9,8 +9,8 @@ const CursorIcon = (props) => {
       <Image
         className="avatar"
         src={userData.photoURL}
-        width={80}
-        height={80}
+        width={50}
+        height={50}
         alt={"icon"}
       />
       <style jsx global>{`

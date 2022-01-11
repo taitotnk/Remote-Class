@@ -2,6 +2,7 @@ import { useRealtimeSharedState } from "realtimely";
 import { useAuth } from "context/useAuth";
 import { Button } from "@chakra-ui/react";
 import { useState } from "react";
+import Image from "next/image";
 
 export type SeatProps = {
   seatNumber: number;
@@ -48,7 +49,14 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber }) => {
           {seatNumber}
         </Button>
       )}
-      {seatState.isSitDown && <div>{seatState.name}</div>}
+      {seatState.isSitDown && (
+        <Image
+          src={seatState.img}
+          width={30}
+          height={30}
+          alt="席についている人のアイコン"
+        />
+      )}
       {isSeat && (
         <Button onClick={standUp} colorScheme="blue" size="sm">
           立ち上がる

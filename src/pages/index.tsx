@@ -14,6 +14,7 @@ import Header from "components/Header";
 import Chat from "components/Chat";
 import Slide from "components/Slide";
 import stylesOfChat from "../styles/Chat.module.css";
+import { Table } from "components/Table";
 
 const Home: NextPage = () => {
   const { currentUser } = useAuth();
@@ -48,6 +49,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <Table numberOfSeats={5} />
         <div className={stylesOfChat.chat_div}>
           <Chat />
         </div>

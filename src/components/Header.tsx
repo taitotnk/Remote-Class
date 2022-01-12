@@ -62,7 +62,7 @@ const Header: React.FC<Props> = ({ image, name, email }) => {
             <Box>
               <Image
                 src="/images/icon.png"
-                height={100}
+                height={80}
                 width={200}
                 alt="icon"
               />

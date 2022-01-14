@@ -16,6 +16,7 @@ const CursorIcon = (props) => {
       <style jsx global>{`
         .avatar {
           border-radius: 50%;
+        
         }
       `}</style>
       <div className={styles.username}>{userData.displayName}</div>

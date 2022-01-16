@@ -114,9 +114,16 @@
 
 .slide_container {
   position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.table_container {
+  position: absolute;
+  top: 60%;
+  left: 57.2%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 600px) {

@@ -4,12 +4,14 @@ import { Button } from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import Image from "next/image";
 import { SeatContext } from "context/Seat";
+import styles from "styles/Seat.module.css";
 
 export type SeatProps = {
   seatNumber: number;
+  tableId: string;
 };
 
-export const Seat: React.FC<SeatProps> = ({ seatNumber }) => {
+export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
   const { currentUser } = useAuth();
 
   //TODO 個々のコンポーネントで椅子に座っているかの状態が分かりづらいのでリファクタしたい
@@ -22,7 +24,7 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber }) => {
   // 椅子の状態
   const [seatState, setSeatState] = useRealtimeSharedState(
     { isSitDown: false, name: "", img: "" },
-    `SeatState${seatNumber}`
+    `seatState${tableId}${seatNumber}`
   );
 
   // 椅子を押したときの処理
@@ -50,29 +52,46 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber }) => {
   };
 
   return (
-    <div>
+    <>
       {seatState.isSitDown ? (
-        <Button onClick={sitDown} disabled colorScheme="blue" size="sm">
-          {seatNumber}
-        </Button>
+        <Button
+          onClick={sitDown}
+          disabled
+          colorScheme="facebook"
+          size="lg"
+          mr={7}
+        ></Button>
       ) : (
-        <Button onClick={sitDown} colorScheme="blue" size="sm">
-          {seatNumber}
-        </Button>
+        <Button
+          onClick={sitDown}
+          colorScheme="facebook"
+          size="lg"
+          mr={7}
+        ></Button>
       )}
       {seatState.isSitDown && (
-        <Image
-          src={seatState.img}
-          width={30}
-          height={30}
-          alt="席についている人のアイコン"
-        />
+        <div className={styles.icon}>
+          <Image
+            src={seatState.img}
+            className="avatar"
+            width={40}
+            height={40}
+            alt="席についている人のアイコン"
+          />
+          <style jsx global>{`
+            .avatar {
+              border-radius: 50%;
+            }
+          `}</style>
+        </div>
       )}
       {isEachComponentSeat && (
-        <Button onClick={standUp} colorScheme="blue" size="sm">
-          立ち上がる
-        </Button>
+        <div className={styles.standup_btn}>
+          <Button onClick={standUp} colorScheme="blue" size="xs">
+            立ち上がる
+          </Button>
+        </div>
       )}
-    </div>
+    </>
   );
 };

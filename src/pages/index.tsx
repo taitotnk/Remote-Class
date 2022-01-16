@@ -49,7 +49,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <Table numberOfSeats={5} />
+        <div className={styles.table_container}>
+          <Table numberOfSeats={10} tableId="table1" />
+        </div>
         <div className={stylesOfChat.chat_div}>
           <Chat />
         </div>

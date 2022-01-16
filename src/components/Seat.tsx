@@ -11,6 +11,8 @@ export type SeatProps = {
   tableId: string;
 };
 
+const MEET_URL = "https://meet.google.com/cht-ypzb-bhf?authuser=0";
+
 export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
   const { currentUser } = useAuth();
 
@@ -27,6 +29,11 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
     `seatState${tableId}${seatNumber}`
   );
 
+  // 椅子に座った際にmeetを開く
+  const openMeet = () => {
+    window.open(MEET_URL);
+  };
+
   // 椅子を押したときの処理
   const sitDown = () => {
     if (ctx.isSeat) {
@@ -38,6 +45,7 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
       setSeatState(seatState);
       ctx.setIsSeat(!ctx.isSeat);
       setIsEachComponentSeat(true);
+      openMeet();
     }
   };
 

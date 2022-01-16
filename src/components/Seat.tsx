@@ -52,22 +52,17 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
   };
 
   return (
-    <>
+    <div className={styles.seat_container}>
       {seatState.isSitDown ? (
         <Button
           onClick={sitDown}
           disabled
           colorScheme="facebook"
           size="lg"
-          mr={7}
+          // mr={7}
         ></Button>
       ) : (
-        <Button
-          onClick={sitDown}
-          colorScheme="facebook"
-          size="lg"
-          mr={7}
-        ></Button>
+        <Button onClick={sitDown} colorScheme="facebook" size="lg"></Button>
       )}
       {seatState.isSitDown && (
         <div className={styles.icon}>
@@ -87,11 +82,11 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
       )}
       {isEachComponentSeat && (
         <div className={styles.standup_btn}>
-          <Button onClick={standUp} colorScheme="blue" size="xs">
-            立ち上がる
+          <Button onClick={standUp} colorScheme="red" size="xs">
+            立つ
           </Button>
         </div>
       )}
-    </>
+    </div>
   );
 };

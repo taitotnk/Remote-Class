@@ -13,8 +13,8 @@ export const Table: React.FC<TableProps> = ({ numberOfSeats, tableId }) => {
   const ctx = useSeat();
   return (
     <SeatContext.Provider value={ctx}>
-      <Box w="80%" h="30%">
-        <Wrap spacing="50px">
+      <Box w="100%">
+        <Wrap spacing="40px">
           {seatNumArray.map((seatNum) => (
             <WrapItem key={seatNum}>
               <Seat key={seatNum} seatNumber={seatNum} tableId={tableId} />

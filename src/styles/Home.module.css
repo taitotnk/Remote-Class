@@ -126,6 +126,13 @@
   transform: translateX(-50%);
 }
 
+.emoji_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

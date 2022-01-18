@@ -15,6 +15,7 @@ import Chat from "components/Chat";
 import Slide from "components/Slide";
 import stylesOfChat from "../styles/Chat.module.css";
 import { Table } from "components/Table";
+import { EmojiExp } from "components/EmojiExp";
 
 const Home: NextPage = () => {
   const { currentUser } = useAuth();
@@ -52,6 +53,7 @@ const Home: NextPage = () => {
         <div className={styles.table_container}>
           <Table numberOfSeats={10} tableId="tableone" />
         </div>
+        <EmojiExp />
         <div className={stylesOfChat.chat_div}>
           <Chat />
         </div>

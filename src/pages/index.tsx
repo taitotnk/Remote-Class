@@ -50,10 +50,12 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <div className={styles.emoji_container}>
+          <EmojiExp />
+        </div>
         <div className={styles.table_container}>
           <Table numberOfSeats={10} tableId="tableone" />
         </div>
-        <EmojiExp />
         <div className={stylesOfChat.chat_div}>
           <Chat />
         </div>

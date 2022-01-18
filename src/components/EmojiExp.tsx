@@ -142,7 +142,7 @@ export const EmojiExp: React.FC = () => {
         <Button colorScheme="purple" onClick={() => onClick("😢")}>
           😢 {sadState.count}
         </Button> */}
-        <Button colorScheme="blackAlpha" onClick={clear}>
+        <Button colorScheme="blackAlpha" size="sm" onClick={clear}>
           Clear
         </Button>
       </Wrap>

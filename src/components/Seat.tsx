@@ -91,7 +91,7 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
       {isEachComponentSeat && (
         <div className={styles.standup_btn}>
           <Button onClick={standUp} colorScheme="red" size="xs">
-            立つ
+            離席
           </Button>
         </div>
       )}

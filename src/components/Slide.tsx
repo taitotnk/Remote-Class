@@ -14,7 +14,7 @@ const Slide: React.FC = () => {
   );
 
   //slideの最大ページ数
-  const MaxSlideNumber = 7;
+  const MaxSlideNumber = 19;
 
   const goNext = () => {
     slideState.slideNumber += 1;

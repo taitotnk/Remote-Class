@@ -26,7 +26,7 @@ export const Seat: React.FC<SeatProps> = ({ seatNumber, tableId }) => {
   // 椅子の状態
   const [seatState, setSeatState] = useRealtimeSharedState(
     { isSitDown: false, name: "", img: "" },
-    `SEATSTATE${seatNumber}${tableId}`
+    `SEATSSTATE${seatNumber}${tableId}`
   );
 
   // 椅子に座った際にmeetを開く
